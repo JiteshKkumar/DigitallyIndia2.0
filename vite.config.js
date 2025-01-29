@@ -7,13 +7,13 @@ export default defineConfig({
 
   // need to remove later
   server: {
-    allowedHosts: ['https://digitallyindia.onrender.com'],
+    allowedHosts: ['digitallyindia.onrender.com'],
   },
   
 })
 
 // export default {
 //   server: {
-//     allowedHosts: ['https://digitallyindia.onrender.com'],
+//     allowedHosts: ['digitallyindia.onrender.com'],
 //   },
 // };
