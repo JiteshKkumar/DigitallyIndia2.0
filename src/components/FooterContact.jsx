@@ -19,9 +19,9 @@ const FooterContact = () => {
                     Contact us:
                     </button>
                     <div className="text-white">
-                        <p><strong>Email:</strong> contact@example.com</p>
-                        <p><strong>Phone:</strong> +123 456 7890</p>
-                        <p><strong>Address:</strong> 1234 Example St, City, Country</p>
+                        <p><strong>Email:</strong> Digitallyindia@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 8210720570</p>
+                        <p><strong>Address:</strong> Greater Noida West, India</p>
                     </div>
                 </div>
 
