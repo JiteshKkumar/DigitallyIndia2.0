@@ -4,7 +4,7 @@ import SeoImage from '../assets/services/seo.jpg';
 import PpcImage from '../assets/services/ppc.jpg';
 import SocialMedia from '../assets/services/socialmedia.jpg';
 import WebsiteDevelopment from '../assets/services/websitedevlopment.jpg';
-// import HubSpot from '../assets/services/hubspot.png';
+import HubSpot from '../assets/services/hubspot.png';
 import Discovery from '../assets/services/discovery.jpg';
 
 export const servicesData = [
@@ -40,14 +40,14 @@ export const servicesData = [
         foregroundColor: 'bg-red-500',
         textColor: 'text-red-900'
     },
-    // {
-    //     title: 'HubSpot',
-    //     description: 'Reach your audience directly with targeted email campaigns and newsletters.',
-    //     image: HubSpot,
-    //     backgroundColor: 'bg-purple-100',
-    //     foregroundColor: 'bg-purple-500',
-    //     textColor: 'text-purple-900'
-    // },
+    {
+        title: 'HubSpot',
+        description: 'Reach your audience directly with targeted email campaigns and newsletters.',
+        image: HubSpot,
+        backgroundColor: 'bg-purple-100',
+        foregroundColor: 'bg-purple-500',
+        textColor: 'text-purple-900'
+    },
     {
         title: 'Discovery',
         description: 'Track and analyze your website’s performance to make data-driven decisions.',
