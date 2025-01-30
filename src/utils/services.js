@@ -1,11 +1,11 @@
 // src/utils/services.js
 
-import SeoImage from '../assets/services/seo.png';
-import PpcImage from '../assets/services/ppc.png';
-import SocialMediaImage from '../assets/services/smm.png';
-import ContentCreationImage from '../assets/services/content-creation.png';
-import EmailMarketingImage from '../assets/services/email-marketing.png';
-import AnalyticsImage from '../assets/services/analytics.png';
+import SeoImage from '../assets/services/seo.jpg';
+import PpcImage from '../assets/services/ppc.jpg';
+import SocialMediaImage from '../assets/services/Socialmedia.jpg';
+import WebsiteDevelopment from '../assets/services/websitedevlopment.jpg';
+import HubSpot from '../assets/services/Hubspot.png';
+import Discovery from '../assets/services/Discovery.jpg';
 
 export const servicesData = [
     {
@@ -33,25 +33,25 @@ export const servicesData = [
         textColor: 'text-green-900'
     },
     {
-        title: 'Content Creation',
+        title: 'Website Development',
         description: 'Create compelling content that drives engagement and conversions.',
-        image: ContentCreationImage,
+        image: WebsiteDevelopment,
         backgroundColor: 'bg-red-100',
         foregroundColor: 'bg-red-500',
         textColor: 'text-red-900'
     },
     {
-        title: 'Email Marketing',
+        title: 'HubSpot',
         description: 'Reach your audience directly with targeted email campaigns and newsletters.',
-        image: EmailMarketingImage,
+        image: HubSpot,
         backgroundColor: 'bg-purple-100',
         foregroundColor: 'bg-purple-500',
         textColor: 'text-purple-900'
     },
     {
-        title: 'Analytics',
+        title: 'Discovery',
         description: 'Track and analyze your website’s performance to make data-driven decisions.',
-        image: AnalyticsImage,
+        image: Discovery,
         backgroundColor: 'bg-gray-100',
         foregroundColor: 'bg-primary',
         textColor: 'text-gray-900'
