@@ -2,10 +2,10 @@
 
 import SeoImage from '../assets/services/seo.jpg';
 import PpcImage from '../assets/services/ppc.jpg';
-import SocialMedia from '../assets/services/Socialmedia.jpg';
+import SocialMedia from '../assets/services/socialmedia.jpg';
 import WebsiteDevelopment from '../assets/services/websitedevlopment.jpg';
-import HubSpot from '../assets/services/Hubspot.png';
-import Discovery from '../assets/services/Discovery.jpg';
+import HubSpot from '../assets/services/hubspot.png';
+import Discovery from '../assets/services/discovery.jpg';
 
 export const servicesData = [
     {
