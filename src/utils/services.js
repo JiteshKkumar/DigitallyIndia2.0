@@ -2,7 +2,7 @@
 
 import SeoImage from '../assets/services/seo.jpg';
 import PpcImage from '../assets/services/ppc.jpg';
-import SocialMediaImage from '../assets/services/Socialmedia.jpg';
+import SocialMedia from '../assets/services/Socialmedia.jpg';
 import WebsiteDevelopment from '../assets/services/websitedevlopment.jpg';
 import HubSpot from '../assets/services/Hubspot.png';
 import Discovery from '../assets/services/Discovery.jpg';
@@ -27,7 +27,7 @@ export const servicesData = [
     {
         title: 'Social Media Marketing',
         description: 'Engage your audience and grow your brand on social media platforms.',
-        image: SocialMediaImage,
+        image: SocialMedia,
         backgroundColor: 'bg-green-100',
         foregroundColor: 'bg-green-500',
         textColor: 'text-green-900'
