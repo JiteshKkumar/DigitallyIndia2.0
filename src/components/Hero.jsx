@@ -4,6 +4,8 @@ import BannerImg from "../assets/banner.png"
 import LogoCarousel from './LogoCarousel';
 import { motion } from 'framer-motion';
 import variants from '../utils/variants';
+import ContactPopup from './ContactPopup';
+import ContactUs from './ContactUs';
 
 const Hero = () => {
     return (
@@ -62,6 +64,7 @@ const Hero = () => {
 
                 {/* Brand Logos Carousel */}
                 <LogoCarousel />
+                <ContactPopup />
             </div>
         </section>
     );

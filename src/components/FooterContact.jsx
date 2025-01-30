@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import variants from '../utils/variants'
+import googleReview from "../assets/google-review.png"
 
 const FooterContact = () => {
     return (
@@ -22,7 +23,12 @@ const FooterContact = () => {
                         <p><strong>Email:</strong> Digitallyindia@gmail.com</p>
                         <p><strong>Phone:</strong> +91 8210720570</p>
                         <p><strong>Address:</strong> Greater Noida West, India</p>
+                           {/* Google Review Section */}
+                    <div className="shadow mt-4 w-50">
+                        <img src={googleReview} alt="Logo" className="h-20 w-auto rounded-full" />
                     </div>
+                    </div>
+                    
                 </div>
 
                 {/* Right Side: Form */}

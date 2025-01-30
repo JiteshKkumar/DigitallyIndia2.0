@@ -53,9 +53,13 @@ const Footer = () => {
                 <hr 
                 className='my-4 border-white mx-4 sm:mx-6 lg:mx-8'
                 />
-                <div className='flex flex-wrap md:gap-8 gap-4 text-white px-4 sm:px-6 lg:px-8 py-5 '>
+                
+                <div className='flex flex-wrap md:gap-8 gap-4 text-white px-4 sm:px-6 lg:px-8 py-5 flex justify-centre '>
                     <p>© 2025 DigitallyIndia. All Rights Reserved.</p>
-                    <p className='underline underline-offset-4'><a href="#">Privacy Policy</a></p>
+                    <p className=" ml-auto"><a href="#">Privacy Policy</a><a href='#'> | Term of use</a></p>
+                </div>
+                <div>
+                    
                 </div>
             </div>
         </footer>
