@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import processSteps from '../utils/processSteps';
+import Workflow from "../assets/workflow.png"
 
 import { motion } from 'framer-motion';
 import variants from '../utils/variants';
@@ -31,8 +32,23 @@ const WorkingProcess = () => {
                         </p>
                     </div>
                 </motion.div>
-
-                {/* Accordion */}
+                 
+                {/* Motion Image */}
+                <motion.div
+                    className="bg-black text-white p-2 rounded-md mb-2"
+                    initial={{ opacity: 0, y: 50 }} // Start from 50px below the viewport
+                    whileInView={{ opacity: 1, y: 0 }} // Move to original position
+                    transition={{ duration: 1 }}
+                >
+                    <motion.img className="flex flex-col md:flex-row gap-2 mb-"
+                        src={Workflow} // Ensure you import the image correctly
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ amount: 0.1 }}
+                        variants={variants("bottom", 0.7)}
+                    />
+                </motion.div>
+                {/* Accordion
                 {processSteps.map((step, index) => (
                     <motion.div
                         key={index}
@@ -66,7 +82,7 @@ const WorkingProcess = () => {
                             </div>
                         )}
                     </motion.div>
-                ))}
+                ))} */}
             </div>
         </section>
     );

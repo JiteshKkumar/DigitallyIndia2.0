@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import footerLogo from "../assets/footer-logo1.png"
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"; // Importing React Icons
 
 const Navbar = () => {
@@ -51,7 +52,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <a href="/"><img className="h-8 w-auto" src="\src\assets\footer-logo1.png" alt="Your Logo" /></a>
+                        <a href="/"><img className="h-8 w-auto" src={footerLogo} alt="Your Logo" /></a>
                     </div>
 
                     {/* Menu Items (hidden on mobile) */}
