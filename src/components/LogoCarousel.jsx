@@ -3,12 +3,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Example logo imports
-import Logo1 from "../assets/logos/amazon.png";
-import Logo2 from "../assets/logos/dribble.png";
+import Logo1 from "../assets/logos/web-development-icon.png";
+import Logo2 from "../assets/logos/google-ads-logo.png";
 import Logo3 from "../assets/logos/hubspot.png";
-import Logo4 from "../assets/logos/notion.png";
-import Logo5 from "../assets/logos/netflix.png";
-import Logo6 from "../assets/logos/zoom.png";
+import Logo4 from "../assets/logos/seo-icon.png";
+import Logo5 from "../assets/logos/smo-icon.png";
+import Logo6 from "../assets/logos/ui-ux-logo.png";
 import variants from '../utils/variants';
 
 const LogoCarousel = () => {

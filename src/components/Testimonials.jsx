@@ -46,7 +46,7 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="pt-24 pb-8 bg-white" id="testimonials">
+        <section className="pt-24 pb-8 bg-black" id="testimonials">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 {/* Headline and Description */}
                 <motion.div 
@@ -60,7 +60,7 @@ const Testimonials = () => {
                         <h2 className="text-2xl font-bold">What Our Clients Say</h2>
                     </div>
                     <div className="md:w-2/3">
-                        <p className="text-secondary md:w-1/2">
+                        <p className="text-secondary text-white md:w-1/2">
                             Hear directly from our satisfied clients about their experience working with us.
                         </p>
                     </div>

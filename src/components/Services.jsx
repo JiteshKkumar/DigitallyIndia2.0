@@ -8,10 +8,10 @@ import variants from '../utils/variants';
 
 const Services = () => {
     return (
-        <section className=" pt-24 pb-16 bg-white" id="services">
+        <section className=" pt-24 pb-16 bg-black" id="services">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Headline and Description */}
-                <motion.div className="flex flex-col md:flex-row gap-4 mb-12"
+                <motion.div className="justify-center items-center flex flex-col md:flex-row gap-4 mb-12"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ amount: 0.1 }}
@@ -21,14 +21,14 @@ const Services = () => {
                         <h2 className="text-2xl font-bold"
                         >Services</h2>
                     </div>
-                    <div className="md:w-2/3">
+                    {/* <div className="md:w-2/3">
                         <p
-                            className="text-secondary md:w-2/3"
+                            className="text-secondary md:w-2/3 text-white"
 
                         >
                             At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
                         </p>
-                    </div>
+                    </div> */}
                 </motion.div>
 
                 {/* Service Cards */}
@@ -44,7 +44,10 @@ const Services = () => {
                             variants={variants("bottom", 0.5)}
                         >
                             <div className='md:w-1/2 flex flex-col h-full justify-between'>
-                                <button className={`text-xl  py-1.5 font-semibold mb-2 rounded-sm sm:w-60  ${service.foregroundColor}`}>{service.title}</button>
+                            <h4><span style={{ color: '#ff1717' }}>#</span>SERVICE</h4>
+                                <h1 className={`text-9xl  py-1.5 font-semibold mb-4 rounded-sm sm:w-60 `}>{service.title1}</h1>
+                                <button className={`text-4xl font-semibold py-1.5 mb-2 rounded-sm sm:w-60 text-left  `}>{service.title}</button>
+                                <p>{service.description}</p>
 
                                 <a
                                     href="#"

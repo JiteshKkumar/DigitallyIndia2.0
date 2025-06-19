@@ -14,7 +14,7 @@ const WorkingProcess = () => {
     };
 
     return (
-        <section className="pt-12 bg-white" id="use-cases">
+        <section className="pt-12 bg-black" id="use-cases">
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 {/* Headline and Description */}
                 <motion.div className="flex flex-col md:flex-row gap-4 mb-8"
@@ -27,7 +27,7 @@ const WorkingProcess = () => {
                         <h2 className="text-2xl font-bold">Our Working Process</h2>
                     </div>
                     <div className="md:w-2/3">
-                        <p className="text-secondary md:w-1/2">
+                        <p className="text-secondary text-white md:w-1/2">
                             Our Proven Digital Marketing Success through Step-by-Step Guide to Achieving Your Business Goals
                         </p>
                     </div>
@@ -40,12 +40,13 @@ const WorkingProcess = () => {
                     whileInView={{ opacity: 1, y: 0 }} // Move to original position
                     transition={{ duration: 1 }}
                 >
-                    <motion.img className="flex flex-col md:flex-row gap-2 mb-"
+                    <motion.img className="flex flex-col md:flex-row gap-2 "
                         src={Workflow} // Ensure you import the image correctly
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ amount: 0.1 }}
                         variants={variants("bottom", 0.7)}
+                        transition={{ duration: 0.5 }}
                     />
                 </motion.div>
                 {/* Accordion

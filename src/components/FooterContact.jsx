@@ -31,7 +31,7 @@ const FooterContact = () => {
                     
                 </div>
 
-                {/* Right Side: Form */}
+                {/* Right Side: Form
                 <div className="flex-1 bg-[#292A32] justify-center items-center p-8 rounded-md">
                     <form className="flex flex-col justify-center items-center h-20  md:flex-row gap-4">
                         <input
@@ -46,7 +46,7 @@ const FooterContact = () => {
                             Subscribe
                         </button>
                     </form>
-                </div>
+                </div> */}
 
             </motion.div>
         </>

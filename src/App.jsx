@@ -6,6 +6,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import SendEnquiryPopup from './components/SendQuery'
 import Services from './components/Services'
 import Team from './components/Team'
 import Testimonials from './components/Testimonials'
@@ -20,9 +21,10 @@ function App() {
       <Hero/>
       <Services/>
       <CTA/>
-      <CaseStudies/>
       <WorkingProcess/>
-      <Team/>
+      <CaseStudies/>
+      {/* <Team/> */}
+      <SendEnquiryPopup />
       <Testimonials/>
       <Contact/>
       <Footer/>

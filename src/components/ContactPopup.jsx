@@ -11,7 +11,7 @@ const floatingButtonStyle = {
 };
 
 const buttonStyle = {
-  backgroundColor: '#380b1c',  // Parrot green color
+  backgroundColor: '#FFFFFF',  // Parrot green color
   border: 'none',
   color: 'white',
   borderRadius: '50%',
@@ -44,7 +44,7 @@ const ContactPopup = () => {
           onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#100908'} // Darker green on hover
           onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#100908'} // Parrot green when not hovering
         >
-         📠
+        📲
         </a>
         <a
           href="mailto:info@example.com"
@@ -53,7 +53,7 @@ const ContactPopup = () => {
           onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#100908'} // Darker green on hover
           onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#100908'} // Parrot green when not hovering
         >
-          📧
+        📧
         </a>
       </div>
     </div>
