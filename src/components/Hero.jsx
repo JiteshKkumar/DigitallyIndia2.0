@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BannerImg from "../assets/hero1.png";
 import LogoCarousel from './LogoCarousel';
 import { motion } from 'framer-motion';
 import variants from '../utils/variants';
 import ContactPopup from './ContactPopup';
-import ContactUs from './ContactUs';
 
 const Counter = ({ target }) => {
     const [count, setCount] = useState(0);
@@ -12,20 +10,20 @@ const Counter = ({ target }) => {
     useEffect(() => {
         let start = 0;
         const end = target;
-        const duration = 2000; // Duration of the counter animation (in milliseconds)
-        const increment = (end - start) / (duration / 50); // Increment step
+        const duration = 2000;
+        const increment = (end - start) / (duration / 50);
 
         const timer = setInterval(() => {
             start += increment;
             if (start >= end) {
-                clearInterval(timer); // Stop when target is reached
-                setCount(end); // Set to exact target number
+                clearInterval(timer);
+                setCount(end);
             } else {
                 setCount(Math.floor(start));
             }
-        }, 50); // Update every 50ms
+        }, 50);
 
-        return () => clearInterval(timer); // Cleanup on component unmount
+        return () => clearInterval(timer);
     }, [target]);
 
     return <p className="text-4xl font-semibold text-primary">{count}+</p>;
@@ -35,8 +33,8 @@ const Hero = () => {
     return (
         <section className="bg-black pt-12" id='about'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-
                 <div className="flex flex-col md:flex-row items-center gap-6">
+                    
                     {/* Left Side - Text */}
                     <div className="md:w-1/2 mb-8 md:mb-0">
                         <div className='md:w-2/3'>
@@ -56,7 +54,7 @@ const Hero = () => {
                                 viewport={{ amount: 0.1 }}
                                 variants={variants("bottom", 0.5)}
                             >
-                               Partner with digital marketing experts who understand your business goals. Our proven strategies have generated millions in revenue for ambitious brands ready to dominate their market.
+                                Partner with digital marketing experts who understand your business goals. Our proven strategies have generated millions in revenue for ambitious brands ready to dominate their market.
                             </motion.p>
                         </div>
                         <motion.a
@@ -71,25 +69,31 @@ const Hero = () => {
                         </motion.a>
                     </div>
 
-                    {/* Right Side - Image */}
+                    {/* Right Side - Spline 3D Embed */}
                     <div className="md:w-1/2 order-first md:order-last">
-                        <motion.img
-                            src={BannerImg}
-                            alt="banner image"
-                            className="w-auto h-auto ml-auto rounded-md"
+                        <motion.div
+                            className="w-full h-[400px] md:h-[500px] rounded-md overflow-hidden"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ amount: 0.1 }}
                             variants={variants("bottom", 0.2)}
-                        />
+                        >
+                            <iframe 
+                                src="https://my.spline.design/r4xbot-rRnlJJJi8MTDrzAHBR9eTW4M/" 
+                                frameBorder="0" 
+                                width="100%" 
+                                height="100%" 
+                                allow="autoplay; fullscreen"
+                                className="w-full h-full rounded-md"
+                            ></iframe>
+                        </motion.div>
                     </div>
                 </div>
 
-                {/* Brand Logos Carousel */}
-                
+                {/* Contact Popup */}
                 <ContactPopup />
 
-                {/* Client Stats Box */}
+                {/* Client Stats */}
                 <div className="mt-12 p-8 border-2 border-gray-300 rounded-lg shadow-lg bg-black">
                     <div className="grid md:grid-cols-4 gap-12">
                         <motion.div
@@ -130,6 +134,8 @@ const Hero = () => {
                         </motion.div>
                     </div>
                 </div>
+
+                {/* Logo Carousel */}
                 <LogoCarousel />
             </div>
         </section>
@@ -137,78 +143,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-// import React from 'react';
-
-// import BannerImg from "../assets/banner.png"
-// import LogoCarousel from './LogoCarousel';
-// import { motion } from 'framer-motion';
-// import variants from '../utils/variants';
-// import ContactPopup from './ContactPopup';
-// import ContactUs from './ContactUs';
-
-// const Hero = () => {
-//     return (
-//         <section className="bg-white pt-12" id='about'>
-//             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-
-//                 <div className="flex flex-col md:flex-row items-center gap-6">
-//                     {/* Left Side - Text */}
-//                     <div
-//                         className="md:w-1/2 mb-8 md:mb-0">
-//                         <div className='md:w-2/3'>
-//                             <motion.h1
-//                                 className="text-4xl font-bold text-gray-900 mb-4"
-//                                 initial="hidden"
-//                                 whileInView="visible"
-//                                 viewport={{ amount: 0.1 }}
-//                                 variants={variants("bottom", 0.2)}
-//                             >
-//                                 Navigating the digital landscape for success
-//                             </motion.h1>
-//                             <motion.p
-//                                 className="text-gray-600 mb-6"
-//                                 initial="hidden"
-//                                 whileInView="visible"
-//                                 viewport={{ amount: 0.1 }}
-//                                 variants={variants("bottom", 0.5)}
-//                             >
-//                                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
-//                             </motion.p>
-//                         </div>
-//                         <motion.a
-//                             href="#contact"
-//                             className="inline-block px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800"
-//                             initial="hidden"
-//                             whileInView="visible"
-//                             viewport={{ amount: 0.1 }}
-//                             variants={variants("bottom", 0.7)}
-//                         >
-//                             Book a consultation
-//                         </motion.a>
-//                     </div>
-
-//                     {/* Right Side - Image */}
-//                     <div className="md:w-1/2 order-first md:order-last">
-//                         <motion.img
-//                             src={BannerImg}
-//                             alt="banner image"
-//                             className="w-full h-auto rounded-md"
-//                             initial="hidden"
-//                             whileInView="visible"
-//                             viewport={{ amount: 0.1 }}
-//                             variants={variants("bottom", 0.2)}
-//                         />
-//                     </div>
-//                 </div>
-
-//                 {/* Brand Logos Carousel */}
-//                 <LogoCarousel />
-//                 <ContactPopup />
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Hero;

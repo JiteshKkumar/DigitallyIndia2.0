@@ -47,13 +47,18 @@ const Navbar = () => {
     }, [menuItems]);
 
     return (
+        
         <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
                         <a href="/"><img className="h-8 w-auto" src={footerLogo} alt="Your Logo" /></a>
                     </div>
+
+
+                    
 
                     {/* Menu Items (hidden on mobile) */}
                     <div className="hidden md:flex space-x-8 items-center">
