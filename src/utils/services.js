@@ -34,7 +34,7 @@ export const servicesData = [
         image: SeoImage,
         backgroundColor: 'bg-[#F3F3F3]',
         foregroundColor: 'bg-primary',
-        textColor: 'text-black',
+        textColor: 'text-white',
     },
     {
         title1: '4',
