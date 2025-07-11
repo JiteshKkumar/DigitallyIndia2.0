@@ -1,89 +1,49 @@
-import React, { useState } from 'react';
-import { FaMinus, FaPlus } from 'react-icons/fa';
+import React from 'react';
 import processSteps from '../utils/processSteps';
-import Workflow from "../assets/workflow.png"
-
-import { motion } from 'framer-motion';
-import variants from '../utils/variants';
+import Workflow from "../assets/workflow.png";
+import { FaCheckCircle } from 'react-icons/fa';
 
 const WorkingProcess = () => {
-    const [openIndex, setOpenIndex] = useState(0); // State to track the open accordion
-
-    const handleToggle = (index) => {
-        setOpenIndex(openIndex === index ? -1 : index); // Toggle the accordion
-    };
-
     return (
-        <section className="pt-12 bg-black" id="use-cases">
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                {/* Headline and Description */}
-                <motion.div className="flex flex-col md:flex-row gap-4 mb-8"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ amount: 0.1 }}
-                    variants={variants("bottom", 0.7)}
-                >
-                    <div className="flex-shrink-0 bg-primary text-black text-center py-2 px-6 rounded-md">
+        <section className="py-16 bg-black text-white" id="use-cases">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                {/* Header */}
+                <div className="flex flex-col md:flex-row gap-6 items-start md:items-center mb-12">
+                    <div className="bg-pink-600 text-black text-center py-2 px-6 rounded-md shadow-md">
                         <h2 className="text-2xl font-bold">Our Working Process</h2>
                     </div>
-                    <div className="md:w-2/3">
-                        <p className="text-secondary text-white md:w-1/2">
-                            Our Proven Digital Marketing Success through Step-by-Step Guide to Achieving Your Business Goals
-                        </p>
-                    </div>
-                </motion.div>
-                 
-                {/* Motion Image */}
-                <motion.div
-                    className="bg-black text-white p-2 rounded-md mb-2"
-                    initial={{ opacity: 0, y: 50 }} // Start from 50px below the viewport
-                    whileInView={{ opacity: 1, y: 0 }} // Move to original position
-                    transition={{ duration: 1 }}
-                >
-                    <motion.img className="flex flex-col md:flex-row gap-2 "
-                        src={Workflow} // Ensure you import the image correctly
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ amount: 0.1 }}
-                        variants={variants("bottom", 0.7)}
-                        transition={{ duration: 0.5 }}
+                    <p className="text-gray-300 md:w-2/3 text-base leading-relaxed">
+                        Our Proven Digital Marketing Success through Step-by-Step Guide to Achieving Your Business Goals.
+                    </p>
+                </div>
+
+                {/* Workflow Image */}
+                <div className="mb-12">
+                    <img 
+                        src={Workflow} 
+                        alt="Workflow Illustration" 
+                        className="w-full max-w-4xl mx-auto rounded-md shadow-xl"
                     />
-                </motion.div>
-                {/* Accordion
-                {processSteps.map((step, index) => (
-                    <motion.div
-                        key={index}
-                        className={`border rounded-md mb-4 overflow-hidden ${openIndex === index ? 'border-primary' : 'border-gray-300'
-                            }`}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ amount: 0.1 }}
-                        variants={variants("bottom", 0.6)}
-                    >
-                        <button
-                            onClick={() => handleToggle(index)}
-                            className={`w-full text-left p-4 flex justify-between items-center  ${openIndex === index ? 'bg-primary' : 'bg-tartiary'}`}
-                        >
-                            <div className="flex items-center">
-                                <span className="text-secondary font-extrabold text-2xl mr-4">{step.number}</span>
-                                <h3 className="text-lg font-semibold">{step.question}</h3>
+                </div>
+
+                {/* Static Timeline */}
+                <div className="relative border-l border-pink-500 pl-6 space-y-10">
+                    {processSteps.map((step, index) => (
+                        <div key={index} className="relative group">
+                            <div className="absolute -left-[15px] top-1 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center ring-4 ring-black">
+                                <FaCheckCircle className="text-white text-sm" />
                             </div>
-                            <div className='bg-white text-black  border p-1.5  rounded-full'>
-                                {openIndex === index ? (
-                                    <FaMinus />
-                                ) : (
-                                    <FaPlus />
-                                )}
+                            <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-5 shadow-md transition hover:shadow-pink-500/30">
+                                <h3 className="text-lg font-semibold text-pink-500 mb-1">
+                                    Step {step.number}: {step.question}
+                                </h3>
+                                <p className="text-sm text-gray-300 leading-relaxed">{step.answer}</p>
                             </div>
-                        </button>
-                        {openIndex === index && (
-                            <div className="p-4 bg-primary text-secondary">
-                                <hr className='mt-0 mb-5 border-black' />
-                                <p>{step.answer}</p>
-                            </div>
-                        )}
-                    </motion.div>
-                ))} */}
+                        </div>
+                    ))}
+                </div>
+
             </div>
         </section>
     );

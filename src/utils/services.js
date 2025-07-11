@@ -5,7 +5,8 @@ import PpcImage from '../assets/services/ppc.jpg';
 import SocialMedia from '../assets/services/socialmedia.jpg';
 import WebsiteDevelopment from '../assets/services/websitedevlopment.jpg';
 import HubSpot from '../assets/services/Hubspot.png';
-import Discovery from '../assets/services/discovery.jpg';
+import GoogleListing from '../assets/services/GoogleListing.jpg';
+import EmailMarketing from '../assets/services/emailmarketing.png'
 
 export const servicesData = [
     {
@@ -48,7 +49,7 @@ export const servicesData = [
         title1: '5',
         title: 'Google Listing',
         description: 'Get your business seen by local customers. Optimize your Google Business Profile to increase visibility in search results, attract more foot traffic to your door and boosting your local sales.',
-        image: Discovery,
+        image: GoogleListing,
         backgroundColor: 'bg-gray-100',
         foregroundColor: 'bg-primary',
         textColor: 'text-gray-900'
@@ -57,7 +58,7 @@ export const servicesData = [
         title1: '6',
         title: 'Email Marketing',
         description: 'Connect. Convert. Grow. Effective email marketing builds relationships with personalized messaging, increases conversions through targeted offers, and fuels business growth with automated follow-ups.',
-        image: SocialMedia,
+        image: EmailMarketing,
         backgroundColor: 'bg-green-100',
         foregroundColor: 'bg-green-500',
         textColor: 'text-green-900'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import contactImg from "../assets/contact.png";
+import Animation from "../assets/Animation.webm";
 import variants from '../utils/variants';
 
 const ContactUs = () => {
@@ -60,20 +60,20 @@ const ContactUs = () => {
                 <input type="email" id="email" name="email" className="mt-2 py-2.5 px-4 block w-full rounded-md shadow-sm focus:outline-none focus:ring focus:ring-primary" />
               </div>
 
-              {/* Text Area */}
+              {/* Message Textarea */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea id="message" name="message" rows="6" className="mt-2 mb-5 py-2.5 px-4 block w-full rounded-md shadow-sm focus:outline-none focus:ring focus:ring-primary"></textarea>
               </div>
 
-              {/* Send Message Button */}
+              {/* Submit Button */}
               <button type="submit" className="inline-block px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800">
                 Send Message
               </button>
             </form>
           </motion.div>
 
-          {/* Right Side: Image */}
+          {/* Right Side: WebM Animation */}
           <motion.div
             className="relative md:flex justify-end items-center md:w-1/3 md:-m-8 overflow-hidden"
             initial="hidden"
@@ -81,7 +81,16 @@ const ContactUs = () => {
             viewport={{ amount: 0.1 }}
             variants={variants("right", 0.2)}
           >
-            <img src={contactImg} alt="Contact" className="md:absolute md:block hidden top-0 bottom-0 -right-8 h-full" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="md:absolute md:block hidden top-0 bottom-0 -right-8 h-full"
+            >
+              <source src={Animation} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
         </div>
       </div>
